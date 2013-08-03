@@ -1,0 +1,12 @@
+form.block2 {
+	width: 440px;
+}
+form.block2 label {
+	float: left;
+	width: 150px;
+	text-align: right;
+}
+form.block2 input[type="text"], form.block2 select, form.block2 span {
+	float: right;
+	width: 250px;
+}

@@ -1,0 +1,329 @@
+@import url("default.css");
+@import url("text.css");
+@import url("form.css");
+@import url("table.css");
+@import url("button.css");
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {}
+#wrap {
+	width: 940px;
+	position: relative;
+	margin: 0 auto;
+}
+header {
+	float: left;
+	width: 100%;
+	padding: 40px 0 10px;
+}
+
+.nav ul{margin:0;padding:0;}
+
+#main-content {
+	float: left;
+	width: 100%;
+}
+#sidebar {}
+footer {
+	float: left;
+	width: 100%;
+	border: 1px solid #ccc;
+	margin-bottom: 30px;
+}
+footer dl, footer dt, footer dd {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+footer dl {
+	padding: 3px 0;
+	font-size: 1.467em;
+}
+footer dt {
+	font-weight: 600;
+}
+footer dt, footer dd {
+	border-right: 1px solid #ccc;
+	padding: 8px 40px 5px;
+}
+footer dd.pos {
+	background: url(../images/icons.png) no-repeat -130px -124px;
+}
+footer dd.pos2 {
+	background: url(../images/icons.png) no-repeat -130px -160px;
+}
+footer dd.pos3 {
+	border: 0;
+	padding-right: 0;
+	background: url(../images/icons.png) no-repeat -126px -193px;
+}
+
+.logo {
+	width: 386px;
+	height: 41px;
+	float: left;
+}
+.logo a {
+	width: 100%;
+	height: 100%;
+	float: left;
+	background: url(../images/logo.jpg) no-repeat 0 0;
+	overflow: hidden;
+	text-indent: -999px;
+}
+.search {
+	background: #fff;
+	border-color:rgb(153,153,153);
+	border-width:1px;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+	border-style:solid;
+	-moz-box-shadow:inset 6px 6px 4px rgba(0,0,0,0.13);
+	-webkit-box-shadow:inset 6px 6px 4px rgba(0,0,0,0.13);
+	box-shadow:inset 6px 6px 4px rgba(0,0,0,0.13);
+	float: right;
+	position: absolute;
+	right: 0;
+	top: 100px;
+}
+.search input[type="text"] {
+	background: none;
+	border: none;
+	float: left;
+	font-size: 1.367em;
+	padding: 6px;
+	width: 200px;
+}
+.search input[type="submit"] {
+	background: url(../images/icons.png) no-repeat -146px -35px;
+	border: none;
+	margin: 8px 7px 0 0;
+	cursor: pointer;
+	width: 14px; 
+	height: 15px;
+	overflow: hidden;
+	text-indent: -999px;
+	float: right;
+}
+.user-log {
+	float: right;
+}
+.user-log p {
+	float: left;
+	color: #444;
+	margin: 0 0 0 15px;
+}
+.user-log p.button-holder {
+	width: auto;
+}
+.user-log p.button-holder a {
+	color: #666;
+	text-decoration: none;
+	background: url(../images/icons.png) no-repeat -144px 0;
+	padding-left: 20px;
+}
+.user-log p.button-holder a:hover {
+	text-decoration: underline;
+}
+.content {
+	float: left;
+	width: 100%;
+	margin-bottom: 40px;
+	border: solid #BDBDAE 1px;
+}
+.content .inner {
+	float: left;
+	padding: 30px 10px 10px;
+}
+.content2 {
+	float: left;
+	margin-bottom: 20px;
+}
+.content2 .inner {
+	padding: 10px;
+}
+.content2 p {
+	font-size: 1.167em;
+	background: url(../images/icons.png) no-repeat -149px -509px;
+	float: left;
+	padding-left: 20px;
+}
+.block {
+	width: 630px;
+	position: relative;
+	margin: 0 auto 20px;
+}
+.block2 {
+	float:left;
+	width: 100%;
+	margin:0 30px 0 0;
+}
+
+.block2 h2 {
+	width:520px;
+	}
+
+.block2 p {
+	float: left;
+	width: 100%;
+}	
+.block2 dl {
+	background: #eee;
+	padding: 7px 0;
+	float: left;
+	width: 100%;
+	border-radius: 4px;
+	font-size: 1.667em;
+}
+.block2 dt {
+	float: left;
+	margin-left: 10px;
+}
+.block2 dd {
+	float: right;
+	color: #003966;
+	margin-right: 10px;
+	text-align: left;
+	width: 100px;
+}
+
+.block3 {
+	background: #eeeeee;
+background: -moz-linear-gradient(top,  #eeeeee 0%, #eeeeee 85%, #dddddd 93%, #cccccc 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(85%,#eeeeee), color-stop(93%,#dddddd), color-stop(100%,#cccccc));
+background: -webkit-linear-gradient(top,  #eeeeee 0%,#eeeeee 85%,#dddddd 93%,#cccccc 100%);
+background: -o-linear-gradient(top,  #eeeeee 0%,#eeeeee 85%,#dddddd 93%,#cccccc 100%);
+background: -ms-linear-gradient(top,  #eeeeee 0%,#eeeeee 85%,#dddddd 93%,#cccccc 100%);
+background: linear-gradient(to bottom,  #eeeeee 0%,#eeeeee 85%,#dddddd 93%,#cccccc 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+	color:#666;
+	border:1px solid #ccc;
+	position:absolute;
+	right:0;
+	margin:0 15px 0 0;
+	padding:10px 20px 0;
+	width:318px;
+	-webkit-border-radius: 3px;
+     border-radius: 3px;
+}
+
+.block3 h3 {
+	font-size:1.6em;
+	margin:0;
+	font-weight:bold;
+	}
+	
+.block3 p {
+	font-size:1.2em;
+	}
+
+.accord h4 {
+	background: #E9E9E9;
+	color: #666;
+	font-size: 1.667em;
+	padding: 6px 0;
+	border: none;
+	text-indent: 5px;
+	cursor: pointer;
+}
+.accord h4 span, .accord2 h4 span {
+	background: url(../images/icons.png) no-repeat -138px -350px;
+	width: 22px;
+	height: 22px;
+	float: right;
+	margin: -2px 5px;
+}
+.accord2 h4 {
+	cursor: pointer;
+}
+.accord3 h4 {
+	cursor: pointer;
+}
+.accord3 h4 span {
+	float: left;
+	margin: -1px 5px;
+	background: url(../images/icons.png) no-repeat 0 -257px;
+	width: 16px;
+	height: 16px;
+}
+.accord3 h4.active span {
+	background-position: 0 -223px;
+}
+
+.accord h4.active span, .accord2 h4.active span {
+	background: url(../images/icons.png) no-repeat -138px -308px;
+}
+.accord h4 + div, .accord2 h4 + div, .accord3 h4 + div {
+	display: none;
+}
+.accord h4.active, .accord h4:hover {
+	color: #003966;
+}
+.accord h4.active + div, .accord2 h4.active + div, .accord3 h4.active + div {
+	display: block;
+}
+
+.pagos {
+	width: 600px;
+	position: relative;
+	margin: 0 auto 20px;
+	padding:30px 15px 15px;
+	border:1px solid #CCC;
+	overflow:hidden;
+	}
+
+.pagos h4 {
+	border-bottom:none;
+	float:left;
+	width:auto;
+	line-height:80px;
+	padding:0 0 0 90px;
+	font-weight:bold;
+	}
+	
+.webpay {
+	padding:0 90px 0 0;
+	}
+
+.deco {
+	background: #5BC6E8;
+	float: left;
+	width: 100%;
+	height: 3px;
+}
+.info {
+	float: left;
+	width: 100%;
+	padding-top: 7px;
+}
+.info label {
+	background: url(../images/icons.png) no-repeat -139px -470px;
+	padding: 2px 0 2px 26px;
+	margin-right: 10px;
+}
+.info a {
+	margin-top: -6px;
+}
+.form_login_tsc{
+	position:relative;
+	}
+	
+#login_form{
+    float: left;
+    height: 150px;
+    padding: 20px;
+    width: 450px;
+}
+	
+#msgbox{
+	color: #9B9B9B;
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: right;
+}
+
+code{font-size:0.8em;}

@@ -1,24 +1,23 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains footer content and the closing of the
- * #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Twenty_Twelve
- * @since Twenty Twelve 1.0
- */
-?>
-	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'twentytwelve_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
+		</section><!-- #main-content -->
+		<footer>
+			<dl>
+				<dt>Atención de Clientes TSC</dt>
+				<dd class="pos">600 252 5000</dd>
+				<dd class="pos2">072-922141(Fono VI Región)</dd>
+				<dd class="pos3">contacto@intervialchile.cl</dd>
+			</dl>
+		</footer><!-- #footer -->	
+	</div><!-- #wrap -->
+    
+<!-- DETALLE SALDO  -->
+			<div style="width:auto; height:auto; float:left;  display:none;">            
+                    <div id="detalle-box" title="Detalle de Recarga" >
+                    <form name="preview_detalle" id="preview_detalle" action="">
+                    	<div id="datodetalle"><code>MOD_detalle.php</code></div>
+					</form>
+                    </div>
+            </div>
+<!-- -->    
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -1,0 +1,26 @@
+/* http://sonspring.com/journal/clearing-floats */
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* From Wordpress default styles - Custom */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright{
+	display: inline;
+	float: right;
+	text-align: right;
+}
+.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+}
