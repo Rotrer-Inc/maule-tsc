@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Resumen saldo
+ * Template Name: Detalle tarjeta
  */
 if( !empty($_GET["tid"]) ){
 	$nrotarj = sanitize_text_field( wp_kses($_GET["tid"], "") );
@@ -9,22 +9,23 @@ if( !empty($_GET["tid"]) ){
 		wp_redirect( get_bloginfo("url") );
 		exit();
 	}
+	
 }else{
 	$nrotarj = null;
 }
 $dataUser = getCurrentTSC( $nrotarj );
-$asociadas = getTarjetasAsociadas();
+$detalleRecargas= getDetalleRecarga( $nrotarj );
 ?>
 <?php get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<div class="content">
 					<div class="inner">					
 						<ul class="nav2">
-							<li class="current"><a href="<?php print get_page_link(7); ?>">Resumen de Saldo</a></li>
+							<li><a href="<?php print get_page_link(7)."?tid=".$nrotarj; ?>">Resumen de Saldo</a></li>
 							<li><a href="<?php print get_page_link(11); ?>">Recargas no Activadas</a></li>
-							<li><a href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Seguimientos de Recargas</a></li>
+							<li class="current"><a href="<?php print get_page_link(9)."?tid=".$nrotarj; ?>">Seguimientos de Recargas</a></li>
 						</ul>
-						<h2>Resumen de Saldo</h2>
+						<h2>Detalle de Recargas</h2>
 						<div class="block2">
 							<dl>
 								<dt>Número Tarjeta</dt>
@@ -45,36 +46,36 @@ $asociadas = getTarjetasAsociadas();
 							</p>
 							<p class="button-holder">
 								<a class="buttons button1" href="#">Recarga de Tarjeta</a>
-								<a class="buttons button2" href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Detalle de Recarga</a>
+								<a class="buttons button2" href="<?php print APP_JQ."?action=exportaDetalle"; ?>">Decarga Detalle</a>
 							</p>
 							<div class="clear"></div>
 						</div>
 						<div class="block block4">
-							<h4>Otras Tarjetas asociadas</h4>
+							<h4>Ùltimas Recargas</h4>
 							<code>
-							<?php if( !$asociadas ){ ?>
-								<h5>No existen tarjetas asociadas</h5>
+							<?php if( !$detalleRecargas ){ ?>
+								<h5>No existen detalle de recargas disponible.</h5>
 							<?php }else{ ?>
 								<table border="0">
 									<thead>
 										<tr>
 											<th>Nº</th>
-											<th>Número de Tarjeta</th>
-											<th>Último F.Saldo</th>
+											<th>Fecha</th>
+											<th>Hora</th>
+											<th>Plaza</th>
+											<th>Vía</th>
 											<th>Monto</th>
-											<th></th>
-											<th></th>
 										</tr>
 									</thead>
 									<tbody>
-										<?php $i=1; foreach($asociadas as $asociada){ ?>
+										<?php $i=1; foreach($detalleRecargas as $recarga){ ?>
 										<tr>
 											<td><?php print $i; ?></td>
-											<td><?php print $asociada->tarjeta; ?></td>
-											<td><?php print $asociada->fecha; ?> <?php print $asociada->hora; ?></td>
-											<td>$<?php print number_format($asociada->saldo, 0 ,",", "."); ?></td>
-											<td><a href="<?php print get_page_link(9)."?tid=".$asociada->tarjeta; ?>">Detalle de Recarga</a></td>
-											<td><a href="" class="link2" >Recargas Tarjeta</a></td>
+											<td><?php print $recarga->fecharecarga; ?></td>
+											<td><?php print $recarga->hora; ?></td>
+											<td><?php print $recarga->nombre_plaza; ?></td>
+											<td><?php print $recarga->via; ?></td>
+											<td>$<?php print number_format($recarga->monto, 0 ,",", "."); ?></td>
 										</tr>
 										<?php $i++; } ?>
 									</tbody>

@@ -42,9 +42,9 @@
 				<?php if( $_SESSION['mitsc'] == true && !empty($_SESSION['mitsc_rut']) ){ ?>
 				<nav class="nav">
                 	<ul>
-						<li class="<?php echo ( is_page(7) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(7); ?>">Mi Saldo</a></li>
+						<li class="<?php echo ( is_page(array(7,9,11)) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(7); ?>">Mi Saldo</a></li>
 						<li class="<?php echo ( is_page(5) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(5); ?>">Recarga</a></li>
-						<li><a href="peajes.php">Transacciones en Peajes</a></li>
+						<li class="<?php echo ( is_page(array(13,15)) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(13); ?>">Transacciones en Peajes</a></li>
 						<li><a href="#">Actualizar contacto</a></li>
                     </ul>
 				</nav>

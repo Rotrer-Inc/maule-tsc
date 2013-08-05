@@ -327,3 +327,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
 }
 
 code{font-size:0.8em;}
+
+.block4{
+    float: left;
+}
