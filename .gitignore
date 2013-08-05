@@ -14,3 +14,4 @@ app/wp-content/backups/
 app/sitemap.xml
 app/sitemap.xml.gz
 dev/
+*.sql
