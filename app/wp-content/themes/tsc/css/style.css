@@ -331,3 +331,20 @@ code{font-size:0.8em;}
 .block4{
     float: left;
 }
+.error{
+    background-color: #359CFE;
+    border: 1px dashed #FFFFFF;
+    display: none;
+    left: 97px;
+    margin: 416px 0 0;
+    padding: 3px 0;
+    position: absolute;
+    width: 238px;
+    z-index: 500;
+}
+.error p{
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0;
+    text-align: center;
+}

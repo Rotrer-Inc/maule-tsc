@@ -2,60 +2,84 @@
 /**
  * Template Name: Actualizar Home
  */
+$dataUser = getActualizaUsuario();
+$selectTscs = getTscsPorRut();
+$selectRegiones = getRegion();
+$selectCiudades = getCiudad($dataUser->ciudadRecep);
+$selectComuna = getComunas($dataUser->comunaRecep);
+$destinatario = "jgerding@cintra.cl";
+$sendMail = false;
 
-get_header(); ?>
+if ($_POST){
+	$sendMail = sendActualizaTsc($_POST);
+}
+?>
+<?php get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="content">
 				<div class="inner">	
 					<h2>Configuración de Datos</h2>
-					<form class="block2">
+					<form name="frm_mitsc_actualiza" class="block2" id="data" action="" method="post">		
+						<input type="hidden" name="rut" id="rut" value="<?php print $dataUser->rutRecep; ?>">
 						<p>
 							<label>Rut</label>
-							<span>14.446.169-k</span>
+							<span><?php print getPuntosRut( $dataUser->rutRecep ); ?></span>
 						</p>
 						<p>
 							<label>Tarjeta de prepago nº</label>
-							<select name="some_name" id="some_name"  onchange="" size="1">
-								<option value="option1">option1</option>
-								<option value="option2">option2</option>
-
+							<select name="numerocuenta" size="1" class="required select" text="Seleccione tarjeta TSC">							
+								<option value="">Seleccione Tarjeta de Prepago</option>
+								<?php print $selectTscs; ?>
 							</select>
 						</p>
 						<p>
 							<label>Razón social o Nombre</label>
-							<input type="text" />
+							<input name="razonsocial" type="text" class="required text" value="<?php print $dataUser->razonSocialRecep; ?>" maxlength="32" text="Ingrese Razón Social">
 						</p>
 						<p>
 							<label>E-mail</label>
-							<input type="text" />
+							<input name="email" type="text" class="required email" value="<?php print $dataUser->emailRecep; ?>" maxlength="50" text="Ingrese E-mail">
 						</p>
 						<p>
 							<label>Giro</label>
-							<input type="text" />
+							<input name="giro" type="text" class="required text" value="<?php print $dataUser->giroRecep; ?>" maxlength="32" text="Ingrese Giro">
 						</p>
 						<p>
 							<label>Dirección</label>
-							<input type="text" />
+							<input name="direccion" type="text" class="required text" value="<?php print $dataUser->direccionRecep; ?>" maxlength="50" text="Ingrese Dirección">
 						</p>
 						<p>
 							<label>Teléfono</label>
-							<input type="text" />
+							<input name="fono" type="text" class="required phone" value="<?php print $dataUser->fonoRecep; ?>" maxlength="8" text="Ingrese Teléfono">
 						</p>
 						<p>
 							<label>Región</label>
-							<input type="text" />
+							<select name="region" id="region" class="required select" text="Seleccione Región">
+								<option value="">Seleccione Regi&oacute;n</option>
+								<?php print $selectRegiones; ?>
+							</select>
 						</p>
 						<p>
 							<label>Ciudad</label>
-							<input type="text" />
+							<select name="ciudad" id="ciudad" class="required select" text="Seleccione Ciudad">
+								<option value="">Seleccione Ciudad</option>
+								<?php print $selectCiudades; ?>
+¡							</select>
 						</p>
 						<p>
 							<label>Comuna</label>
-							<input type="text" />
+							<select name="comuna" id="comuna" class="required select" text="Seleccione Comuna">
+								<option value="">Seleccione Comuna</option>
+								<?php print $selectComuna; ?>
+							</select>
 						</p>
 						<p class="button-holder">
-							<a class="buttons button4" href="#">Guardar</a>
+							<a class="buttons button4 submitForm" href="">Guardar</a>
 						</p>
+						<div class="error"><p></p></div>
+						<?php if($sendMail){ ?>
+						<h2>Sus datos han sido enviados para actualizar.</h2>
+						<?php } ?>
 						<div class="clear"></div>
 					</form>
 				</div>
