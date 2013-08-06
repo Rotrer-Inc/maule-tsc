@@ -24,11 +24,9 @@
 	<div class="deco"></div>
 	<div id="wrap">		
 		<header>
-			<!--
 			<h1 class="logo">
 				<a href="<?php bloginfo("url"); ?>">Ruta del Maule - TSC</a>
 			</h1>
-   -->
 			<?php if( $_SESSION['mitsc'] == true && !empty($_SESSION['mitsc_rut']) ){ ?>
 			<div class="user-log">
 				<p>Bienvenido: Nombre de usuario</p>
