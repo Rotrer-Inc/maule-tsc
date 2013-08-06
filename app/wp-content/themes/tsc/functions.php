@@ -303,6 +303,30 @@ function exportaNoActivas(){
 	die();
 }
 /*
+ * Funcion info cliente por rut
+ */
+function getActualizaUsuario(){
+	global $wpdb;
+	
+	$querystr = "SELECT * 
+	 		FROM ".$wpdb->prefix."app_clientes_tac 
+			where nroCuentaRecep =  '".$_SESSION['mitsc_tsc']."' ;"; 
+	$result = $wpdb->get_row( $querystr );
+	
+	return $result;
+}
+/*
+ * Funcion obtener tscs por rut cliente
+ */
+function getTscsPorRut(){
+	global $wpdb;
+	
+	$querystr = "SELECT * 
+	 		FROM ".$wpdb->prefix."app_clientes_tac 
+			WHERE rutRecep =  '".$_SESSION['mitsc_rut']."' ;";
+	$result = $wpdb->get_results( $querystr );
+}
+/*
  * Personalización Panel Wordpress
  */
 show_admin_bar(false);

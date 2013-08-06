@@ -45,7 +45,7 @@
 						<li class="<?php echo ( is_page(array(7,9,11)) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(7); ?>">Mi Saldo</a></li>
 						<li class="<?php echo ( is_page(5) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(5); ?>">Recarga</a></li>
 						<li class="<?php echo ( is_page(array(13,15)) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(13); ?>">Transacciones en Peajes</a></li>
-						<li><a href="#">Actualizar contacto</a></li>
+						<li class="<?php echo ( is_page(17) ) ? 'current' : ''; ?>"><a href="<?php echo get_page_link(17); ?>">Actualizar contacto</a></li>
                     </ul>
 				</nav>
 				<?php } ?>
