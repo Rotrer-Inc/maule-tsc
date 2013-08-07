@@ -3,7 +3,27 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8" xml:lang="es">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<title><?php
+	/*
+	 * Print the <title> tag based on what is being viewed.
+	 */
+	global $page, $paged;
+
+	wp_title( '|', true, 'right' );
+
+	// Add the blog name.
+	bloginfo( 'name' );
+
+	// Add the blog description for the home/front page.
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+		echo " | $site_description";
+
+	// Add a page number if necessary:
+	if ( $paged >= 2 || $page >= 2 )
+		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+
+	?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/style.css" />
 	<link href="<?php echo get_template_directory_uri(); ?>/css/jquery-ui-1.9.0.custom.css" rel="stylesheet">
 	<!--[if lt IE 9]>

@@ -1,1 +1,1 @@
-<?php wp_redirect( bloginfo( "url")); ?>
+<?php wp_redirect( get_bloginfo( "url")); ?>

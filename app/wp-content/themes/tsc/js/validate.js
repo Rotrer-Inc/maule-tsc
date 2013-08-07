@@ -138,6 +138,19 @@ function activaError(state, text, el){
 		return false;
 	}
 }
+function activaErrorClass(state, text, el, classStyle){
+        var classE = "error";
+	if(state === false){
+            if(classStyle != ""){
+                classE = classStyle;
+            }
+            $("."+classE+" p").empty().html( text );
+            $("."+classE).fadeIn("fast");
+            $("."+classE).fadeOut(2000);
+            if(el != "") el.addClass("errored");
+            return false;
+	}
+}
 function getAge(year, month, day) {
     var today = new Date();
     var birthDate = new Date(year, month, day);
