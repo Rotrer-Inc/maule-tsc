@@ -11,11 +11,14 @@ $(document).ready(function(){
         if( validaNumber(singleValue) && parseInt(singleValue) >= 6000 && parseInt(singleValue) <= 999999 ){
             $("#datosSingle").submit();
         }else{
-            return activaErrorClass(false, "Debe ingresar monto, solo números.", "", "errorSingle");
+            return activaErrorClass(false, "Debe ingresar monto, solo números.", $("#single_value"), "errorSingle");
         }
     });
     $("#single_value").change(function(){
         $(".singlePriceTotal").empty().text( "$"+$(this).val() );
+    });
+    $("#single_value").focus(function(){
+        $(this).removeClass("errored");
     });
     
     $("#send_multi").click(function(e){
@@ -28,5 +31,8 @@ $(document).ready(function(){
                 return activaErrorClass(false, "Debe ingresar monto, solo números.", $(this), "errorMulti");
             }
         });
+    });
+    $('.multi_value').focus(function(){
+        $(this).removeClass("errored");
     });
 });

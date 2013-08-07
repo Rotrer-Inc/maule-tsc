@@ -60,7 +60,7 @@ $asociadas = getTarjetasAsociadas();
 									<em id="enviar">Monto mínimo $6.000 y máximo $999.999 para cada TSC</em>
 								</p>
 								<p class="button-holder">
-									<div class="error errorSingle"><p></p></div>
+									<div class="errorSingle"><p></p></div>
 									<a class="buttons button4" id="send_single" href="">Continuar</a>
 								</p>
 							</div>

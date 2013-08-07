@@ -342,15 +342,21 @@ code{font-size:0.8em;}
     width: 238px;
     z-index: 500;
 }
-.error p, .errorMulti p{
+.error p, .errorMulti p, .errorSingle p{
     color: #FFFFFF;
     font-size: 12px;
     margin: 0;
     text-align: center;
 }
 .errorSingle{
-    left: 270px;
-    margin: 189px 0 0;
+    background-color: #359CFE;
+    border: 1px dashed #FFFFFF;
+    display: none;
+    float: left;
+    left: 97px;
+    margin: 2px 0 0 260px;
+    padding: 3px 0;
+    width: 238px;
 }
 .errorMulti{
     background-color: #359CFE;
