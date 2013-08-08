@@ -10,7 +10,7 @@ define(APP_JQ, get_bloginfo("wpurl")."/wp-admin/admin-ajax.php");
 include 'functions/function-login.php';
 include 'functions/function-misaldo.php';
 include 'functions/function-actualizadatos.php';
-
+include 'functions/function-recargas.php';
 /*
  * Formater string RUT
  */

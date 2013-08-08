@@ -42,6 +42,7 @@ $asociadas = getTarjetasAsociadas();
 											<td>
 												<form id="datosSingle" name="datosSingle" method="post" action="<?php print get_page_link(20); ?>">
 													<input type="hidden" name="single_tsc" id="single_tsc" value="<?php print $dataUser->tarjeta; ?>">
+													<input type="hidden" name="single_tsc_saldo" id="single_tsc_saldo" value="<?php print $dataUser->saldo; ?>">
 													<input type="text" name="single_value" id="single_value" value="" autocomplete="off"/>
 												</form>
 											</td>
@@ -69,10 +70,12 @@ $asociadas = getTarjetasAsociadas();
 							<div class="block2">
 								<p class="info">
 									<label>Recargar monto fijo a todas las Tarjetas</label>
-									<input id="monto_fijo" type="text" onKeyPress="" />
-									<a class="buttons button4" href="#" onClick="">Aceptar</a>
+									<input id="multiMontoFijo" name="multiMontoFijo" type="text" value=""/>
+									<div class="errorMontoFijo"><p></p></div>
+									<a class="buttons button4" id="multiDarIgual" href="">Aceptar</a>
 								</p>
 								<form id="datosMulti" name="datosMulti" method="post" action="<?php print get_page_link(20); ?>">
+									<input type="hidden" name="multiTotalVaue" id="multiTotalVaue" value="">
 										<div id="resultado">
 											<table border="0">
 												<thead>
@@ -91,6 +94,7 @@ $asociadas = getTarjetasAsociadas();
 														<td>$<?php print number_format($tsc->saldo, 0 ,",", ".") ?></td>
 														<td>
 															<input type="hidden" name="multi_tsc[]" value="<?php print $tsc->tarjeta; ?>">
+															<input type="hidden" name="multi_tsc_saldo[]" value="<?php print $tsc->saldo; ?>">
 															<input type="text" name="multi_value[]" class="multi_value" value="" autocomplete="off" />
 														</td>
 													</tr>

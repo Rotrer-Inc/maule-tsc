@@ -23,16 +23,49 @@ $(document).ready(function(){
     
     $("#send_multi").click(function(e){
         e.preventDefault();
+        var returnMulti = true;
         $('.multi_value').each(function(index) {
             var multiValueTmp = $(this).val();
             if( validaNumber(multiValueTmp) && parseInt(multiValueTmp) >= 6000 && parseInt(multiValueTmp) <= 999999 ){
-                $("#datosMulti").submit();
+                returnMulti = true;
             }else{
-                return activaErrorClass(false, "Debe ingresar monto, solo números.", $(this), "errorMulti");
+                returnMulti = activaErrorClass(false, "Debe ingresar monto, solo números.", $(this), "errorMulti");
+                return returnMulti;
             }
         });
+        
+        if(returnMulti == true){
+            $("#datosMulti").submit();
+        }
     });
     $('.multi_value').focus(function(){
         $(this).removeClass("errored");
+    });
+    $("#multiDarIgual").click(function(e){
+        e.preventDefault();
+        var multiMontoFijo = $("#multiMontoFijo").val();
+        var totalMulti = 0;
+        if( validaNumber(multiMontoFijo) && parseInt(multiMontoFijo) >= 6000 && parseInt(multiMontoFijo) <= 999999 ){
+            $('.multi_value').each(function(index) {
+                totalMulti += parseInt(multiMontoFijo);
+                $(this).val(multiMontoFijo);
+                $(this).removeClass("errored");
+            });
+            $(".multiPriceTotal").empty().text( "$"+totalMulti );
+            $("#multiTotalVaue").val(totalMulti);
+        }else{
+            return activaErrorClass(false, "Debe ingresar monto, solo números.", $("#multiMontoFijo"), "errorMontoFijo");
+        }
+    });
+    var tmpTotal, tmpVal, tmpValFocus;
+    $('.multi_value').change(function(){
+        tmpTotal = parseInt($("#multiTotalVaue").val());
+        tmpVal = parseInt($(this).val());
+        var totalMulti = tmpTotal - tmpValFocus + tmpVal;
+        $(".multiPriceTotal").empty().text( "$"+totalMulti );
+        $("#multiTotalVaue").val(totalMulti);
+    });
+    $('.multi_value').focus(function(){
+        tmpValFocus = parseInt($(this).val());
     });
 });
