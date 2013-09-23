@@ -41,13 +41,14 @@ $detalleRecargas= getDetalleRecarga( $nrotarj );
 									<?php } ?>
 								</dd>
 							</dl>
-							<p>
+							
+							<div class="button-holder">
+                            <p>
 								<em>*Saldo se activa al realizar la primera transacción</em>
 							</p>
-							<p class="button-holder">
 								<a class="buttons button1" href="#">Recarga de Tarjeta</a>
 								<a class="buttons button2" href="<?php print APP_JQ."?action=exportaDetalle"; ?>">Decarga Detalle</a>
-							</p>
+							</div>
 							<div class="clear"></div>
 						</div>
 						<div class="block block4">

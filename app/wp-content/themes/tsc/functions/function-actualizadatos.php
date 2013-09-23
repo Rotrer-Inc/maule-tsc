@@ -101,7 +101,7 @@ function sendActualizaTsc( $post ){
 	@extract($post);
 	// Additional headers
 	if ($numerocuenta  >0) {
-		$mail->Mailer = 'smtp';
+		#$mail->Mailer = 'smtp';
 		$hoy = date('d-m-Y H:i:s');
 		$fromname = $razonsocial ;
 		$asunto = "Actualizar a $fromname - Tarjeta de Prepago $numerocuenta: ";
@@ -122,7 +122,7 @@ function sendActualizaTsc( $post ){
 		   Enviado el: $hoy
 		   ";
 		#$destinatario = "jgerding@cintra.cl";
-		$destinatario = "cristian@rotrer.com";
+		$destinatario = "leonrov@gmail.com";
 		wp_mail( $destinatario, "Tarjeta de Prepago $numerocuenta  -" .$razonsocial, $body );
 		
 		return true;

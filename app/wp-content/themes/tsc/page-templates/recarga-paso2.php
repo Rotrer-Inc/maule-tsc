@@ -10,7 +10,6 @@ if($_POST){
 	}else{
 		$responseRecarga = processRecargaSingle($_POST);
 	}
-	#pr($_SESSION["recarga"]);
 }else{
 	wp_redirect( get_bloginfo("url") );
 	exit();
@@ -76,12 +75,13 @@ if($_POST){
 					<div class="pagos">
 						<h4>Pagar con:</h4>
 						<img class="webpay alignright" src="<?php echo get_template_directory_uri(); ?>/images/webpay.gif" alt="webpay" />
-						<p class="button-holder">
+						<div class="button-holder">
 							<?php if($responseRecarga->status){ ?>
-							<a class="buttons button4" href="webpay.php">Confirmar</a>
+							<a class="buttons button4" href="<?php print get_page_link(21); ?>">Confirmar</a>
+							<!--<a class="buttons button4" href="<?php print get_bloginfo("url"); ?>/KCC/pago.php">Confirmar</a>-->
 							<?php } ?>
 							<a class="buttons button2" href="<?php print get_page_link(5); ?>">Volver</a>
-						</p>
+						</div>
 					</div>
 
 				</div>

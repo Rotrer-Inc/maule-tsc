@@ -47,7 +47,7 @@ function processRecargaMulti( $post ){
 }
 function processRecargaSingle( $post ){
 	global $wpdb;
-	@extract($post); pr($post);
+	@extract($post);
 	$arrError = array();
 	//Validar array post
 	if(

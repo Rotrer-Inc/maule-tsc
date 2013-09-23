@@ -154,7 +154,7 @@ footer dd.pos3 {
 }
 .block {
 	width: 630px;
-	position: relative;
+	/*position: relative;*/
 	margin: 0 auto 20px;
 }
 .block2 {
@@ -173,15 +173,16 @@ footer dd.pos3 {
 }	
 .block2 dl {
 	background: #eee;
-	padding: 7px 0;
-	float: left;
-	width: 100%;
+	width: 630px;
+	height:40px;
+	line-height:40px;
+	margin:0 auto 10px;
 	border-radius: 4px;
 	font-size: 1.667em;
 }
 .block2 dt {
 	float: left;
-	margin-left: 10px;
+	margin-left: 40px;
 }
 .block2 dd {
 	float: right;
@@ -326,11 +327,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', end
     text-align: right;
 }
 
-code{font-size:0.8em;}
+code{font-size:1em;font-family:Calibri, Arial, Helvetica, sans-serif;}
 
-.block4{
+/*.block4{
     float: left;
-}
+}*/
 .error{
     background-color: #359CFE;
     border: 1px dashed #FFFFFF;
@@ -381,3 +382,34 @@ code{font-size:0.8em;}
 .errored{
     border: 1px solid #CC0000;
 }
+
+.inner-fracaso{
+	padding:30px 10px 10px;
+	}
+
+#fracaso{
+	border:1px solid #ccc;
+	}
+	
+#fracaso th{
+	background:#E5EBF0;
+	font-size:1.5em;
+	font-weight:bold;
+	height:40px;
+	}
+	
+#contenido-fracaso{
+	width:460px;
+	margin:0 auto;
+	font-size:11px;
+	padding: 15px 0;
+	text-align:left;
+	}
+	
+#contenido-fracaso p{
+	font-weight:bold;
+	}
+	
+#contenido-fracaso ul li{
+	margin:10px 0;
+	}

@@ -82,9 +82,15 @@
 	color: #fff;
 }
 .button-holder {
-	float: left;
-	width: 100%;
+	width: 630px;
+	overflow:hidden;
+	margin:0 auto;
 }
+
+.pagos .button-holder {
+    width: 600px;
+}
+
 .button-holder.v2 {
 	border-bottom: 1px solid #eee;
 	padding-bottom: 5px;
@@ -97,6 +103,7 @@
 	float: right;
 	text-decoration: none;
 	margin-left: 10px;
+	font-size:1.3em;
 }
 .button1 {
 	background-image:-moz-linear-gradient(rgb(255,153,0) 0%,rgb(255,153,0) 1%,rgb(255,102,0) 100%); 

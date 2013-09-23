@@ -18,6 +18,7 @@ if ($_POST){
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="content">
 				<div class="inner">	
+                
 					<h2>Configuración de Datos</h2>
 					<form name="frm_mitsc_actualiza" class="block2" id="data" action="" method="post">		
 						<input type="hidden" name="rut" id="rut" value="<?php print $dataUser->rutRecep; ?>">

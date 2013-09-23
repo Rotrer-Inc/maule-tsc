@@ -1,9 +1,28 @@
 <?php
 session_start();
 /*
+ * Revisa Session de Usuario
+ */
+if($_SESSION["mitsc"] != 1 && !is_home()){
+	#unset($_SESSION);
+	#session_destroy();
+	#wp_redirect( get_bloginfo("url") );
+	#exit();
+}
+/*
  * Constantes Sitio
  */
 define(APP_JQ, get_bloginfo("wpurl")."/wp-admin/admin-ajax.php");
+define(KKC_ROOT, str_replace("wp-content/plugins", "KCC", WP_PLUGIN_DIR));
+define(INSUMOS_ROOT, str_replace("wp-content/plugins", "insumos", WP_PLUGIN_DIR));
+define(DS, "/");
+define(ACEPTA_DOT_COM, INSUMOS_ROOT.DS."aceptaDotCom");
+define(WE, INSUMOS_ROOT.DS."WE");
+define(WS, INSUMOS_ROOT.DS."WS");
+define(WS_RES, INSUMOS_ROOT.DS."WSResp");
+define(WS_TEMP, INSUMOS_ROOT.DS."WSTemp");
+define(aceptaDotCom_bcoChileAut, '');
+define(aceptaDotCom_bcoChileAce, '');
 /*
  * Includes funciones por seccion
  */
@@ -11,6 +30,7 @@ include 'functions/function-login.php';
 include 'functions/function-misaldo.php';
 include 'functions/function-actualizadatos.php';
 include 'functions/function-recargas.php';
+include 'functions/function-webpay.php';
 /*
  * Formater string RUT
  */

@@ -40,7 +40,7 @@ $asociadas = getTarjetasAsociadas();
 											<td><?php print $dataUser->tarjeta; ?></td>
 											<td>$<?php print number_format($dataUser->saldo, 0 ,",", ".") ?></td>
 											<td>
-												<form id="datosSingle" name="datosSingle" method="post" action="<?php print get_page_link(20); ?>">
+												<form id="datosSingle" name="datosSingle" method="post" action="<?php print get_page_link(19); ?>">
 													<input type="hidden" name="single_tsc" id="single_tsc" value="<?php print $dataUser->tarjeta; ?>">
 													<input type="hidden" name="single_tsc_saldo" id="single_tsc_saldo" value="<?php print $dataUser->saldo; ?>">
 													<input type="text" name="single_value" id="single_value" value="" autocomplete="off"/>
@@ -74,7 +74,7 @@ $asociadas = getTarjetasAsociadas();
 									<div class="errorMontoFijo"><p></p></div>
 									<a class="buttons button4" id="multiDarIgual" href="">Aceptar</a>
 								</p>
-								<form id="datosMulti" name="datosMulti" method="post" action="<?php print get_page_link(20); ?>">
+								<form id="datosMulti" name="datosMulti" method="post" action="<?php print get_page_link(19); ?>">
 									<input type="hidden" name="multiTotalVaue" id="multiTotalVaue" value="">
 										<div id="resultado">
 											<table border="0">

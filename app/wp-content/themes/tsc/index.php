@@ -1,3 +1,12 @@
+<?php
+/*
+ * Si ya tiene session, va directo a resumen saldo
+ */
+ if($_SESSION["mitsc"] == 1){
+	 wp_redirect( get_page_link(7) );
+	 exit();
+ }
+?>
 <?php get_header(); ?>
 					<div class="inner">	
 						

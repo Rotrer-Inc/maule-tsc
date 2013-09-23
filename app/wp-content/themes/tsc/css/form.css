@@ -1,5 +1,7 @@
 form.block2 {
 	width: 440px;
+	margin:0 auto;
+	float:none;
 }
 form.block2 label {
 	float: left;

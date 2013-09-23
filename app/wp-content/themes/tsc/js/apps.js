@@ -68,4 +68,8 @@ $(document).ready(function(){
     $('.multi_value').focus(function(){
         tmpValFocus = parseInt($(this).val());
     });
+    $('#imprimir_webpay').click(function(e){
+	    e.preventDefault();
+		$('#comprobante').printArea();
+    });
 });

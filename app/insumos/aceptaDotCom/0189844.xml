@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+									<Documento id="T33F16148">
+											<DTE>	
+											  <Encabezado>
+											      <IdDoc>
+											          <TipoDTE>34</TipoDTE>
+											          <Folio>189844</Folio>
+											          <FchEmis>2013-09-06</FchEmis>
+											      </IdDoc>
+											      <Emisor>
+											          <RUTEmisor>96875230-8</RUTEmisor>
+											          <RznSoc>Autopista del Maipo Sociedad Concesionaria S.A</RznSoc>
+											          <GiroEmis>Concesiones Viales</GiroEmis>
+											          <Acteco>452020</Acteco>
+											          <DirOrigen>Avenida Andres Bello 2711 Piso 17</DirOrigen>
+											          <CmnaOrigen>Las Condes</CmnaOrigen>
+											          <CiudadOrigen>Santiago</CiudadOrigen>
+									                  <CorreoEmisor>ventas@autopistadelmaipo.cl</CorreoEmisor>
+											      </Emisor>
+											      <Receptor>
+											          <RUTRecep>-</RUTRecep>
+											          <RznSocRecep></RznSocRecep>
+											          <GiroRecep>.</GiroRecep>
+											          <DirRecep></DirRecep>
+											          <CmnaRecep></CmnaRecep>
+											          <CiudadRecep></CiudadRecep>
+											      </Receptor>
+											      <Totales>
+											          <MntExe></MntExe>		          
+											          <MntTotal></MntTotal>
+									                  <TmstFirma>2013-09-06T14:04:30</TmstFirma>
+											      </Totales>
+											  </Encabezado>
+											  		 
+											</DTE>
+											<DatosAdjuntos>
+											  <MailReceptor></MailReceptor>
+											  <MailEmisor>ventas@autopistadelmaipo.cl</MailEmisor>
+									          <Subject>Factura Recarga TSC Autopista del Maipo</Subject>
+											  <Copias>0</Copias>
+											</DatosAdjuntos>		
+									</Documento>
