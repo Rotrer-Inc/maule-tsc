@@ -16,12 +16,12 @@ if($_POST){
 		case 'VC':
 			$tipopago = 'Crédito';
 			$tipocuota = 'Cuotas normales';
-			$numerocuotas = $numero_cuotas;
+			$numerocuotas = $responseExito->TBK_NUMERO_CUOTAS;
 		break;
 		case 'SI':
 			$tipopago = 'Crédito';
 			$tipocuota = 'Sin interés';
-			$numerocuotas = $numero_cuotas;
+			$numerocuotas = $responseExito->TBK_NUMERO_CUOTAS;
 		break;
 		case 'CI':
 			$tipopago = 'Crédito';
@@ -125,7 +125,7 @@ if($_POST){
 			                </table>
                             <table>
                             	<tr>
-				                  <td colspan="2" style="border:none;text-align:right;font-size:12px;font-weight:bold;"><a href="https://www.rutamaipo.cl/images/pdf/certificacion-Webpay-AM.pdf" target="_blank" style="color:#003C69;">Políticas de Devolución </a></td>
+				                  <td colspan="2" style="border:none;text-align:right;font-size:12px;font-weight:bold;"><a href="http://dev.neuralis.cl/rutamaule/tarjeta-prepago/app/wp-content/themes/tsc/politicas-de-devolucion.pdf" target="_blank" style="color:#003C69;">Políticas de Devolución </a></td>
 			                  	</tr>
                             </table>
 			            </td>
