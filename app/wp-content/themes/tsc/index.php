@@ -1,8 +1,17 @@
+<?php
+/*
+ * Si ya tiene session, va directo a resumen saldo
+ */
+ if($_SESSION["mitsc"] == 1){
+	 wp_redirect( get_page_link(7) );
+	 exit();
+ }
+?>
 <?php get_header(); ?>
 					<div class="inner">	
 						
-						<div class="block2">
-                               <h2>Accede a tu cuenta</h2>
+						<div class="block2-inicio">
+                               <h2 class="accesotsc">Accede a tu cuenta</h2>
                                 
                                 
 							   <form class="block2" method="post" action="<?php echo get_page_link(7); ?>" id="login_form">
@@ -17,7 +26,7 @@
 
                                 </form>
                          </div>
-                         <div class="block3">
+                         <div class="block3 acceso">
                         		<h3>Centro de Gestión de Telepeaje</h3>
                                     <p>Ruta 5 Sur kilómetro 57,6 Mostazal VI Región.</p>
                                     

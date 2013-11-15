@@ -122,7 +122,7 @@ function validaPhone(val){
     return patron.test(val);
 }
 function validaNumber(val){
-	patron =/[0-9]\d/; // Solo acepta números
+	patron =/^\d+$/; // Solo acepta números
     return patron.test(val);
 }
 function validaEmail(val){

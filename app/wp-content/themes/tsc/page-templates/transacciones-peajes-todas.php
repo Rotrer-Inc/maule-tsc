@@ -32,7 +32,7 @@ $transacciones = getTransaccionesPeaje( $nrotarj, 9999 );
 								<p>Transacciones efectuadas en plaza.</p>
 							<?php if(!$transacciones){ ?>
 							<?php }else{ ?>
-								<table border="0">
+								<table border="0" class="table2">
 									<thead>
 										<tr>
 											<th>Fecha</th>

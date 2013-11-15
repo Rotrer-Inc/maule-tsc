@@ -1,12 +1,59 @@
+
+form {
+    float: left;
+}
 form.block2 {
-	width: 440px;
+    float: none;
+    margin: 0 auto 20px;
+    width: 490px;
+}
+form p {
+    margin-bottom: 12px;
+    width: 100%;
+	float:left;
 }
 form.block2 label {
-	float: left;
-	width: 150px;
-	text-align: right;
+    float: left;
+    padding-top: 4px;
+    text-align: right;
+    width: 176px;
 }
 form.block2 input[type="text"], form.block2 select, form.block2 span {
-	float: right;
-	width: 250px;
+    border: 1px solid #C1C1C1;
+    border-radius: 3px 3px 3px 3px;
+    float: right;
+    padding: 6px;
+    width: 250px;
+}
+form.block2 select{
+	width:264px;
+	}
+form.block2 input[type="text"]:hover, form.block2 select:hover {
+}
+
+form:focus {
+    border: 1px solid #D4990A;
+}
+input[type="text"]:focus, textarea:focus {
+    box-shadow: 0 0 2px #D4990A;
+}
+input {
+    border: 1px solid #999999;
+    border-radius: 3px 3px 3px 3px;
+    padding: 4px;
+}
+#single_value, #single_value:focus {
+    border: medium none;
+    box-shadow: none;
+    float: right;
+    font-size: 12px;
+    height: 20px;
+    outline: medium none;
+    padding: 3px;
+    width: 207px;
+	text-align:center;
+}
+#datosSingle {
+    float: right;
+	width:100px;
 }

@@ -25,6 +25,8 @@ $detalleRecargas= getDetalleRecarga( $nrotarj );
 							<li><a href="<?php print get_page_link(11); ?>">Recargas no Activadas</a></li>
 							<li class="current"><a href="<?php print get_page_link(9)."?tid=".$nrotarj; ?>">Seguimientos de Recargas</a></li>
 						</ul>
+						
+				<div class="clear"></div>
 						<h2>Detalle de Recargas</h2>
 						<div class="block2">
 							<dl>
@@ -37,22 +39,21 @@ $detalleRecargas= getDetalleRecarga( $nrotarj );
 									<?php if( $dataUser->saldo > 0 ){ ?>
 									$<?php print number_format($dataUser->saldo, 0 ,",", ".") ?>
 									<?php }else{?>
-									Sin Saldo <br><span>* Saldo se activa al realizar la primera transacción</span>
+									Sin Saldo <br>
 									<?php } ?>
 								</dd>
 							</dl>
-							<p>
+							      
 								<em>*Saldo se activa al realizar la primera transacción</em>
-							</p>
-							<p class="button-holder">
-								<a class="buttons button1" href="#">Recarga de Tarjeta</a>
-								<a class="buttons button2" href="<?php print APP_JQ."?action=exportaDetalle"; ?>">Decarga Detalle</a>
-							</p>
+							
+							<div class="button-holder">
+                     
+								<a class="buttons button1" href="#">Recargar Tarjeta</a> <a class="buttons button2" href="<?php print APP_JQ."?action=exportaDetalle"; ?>">Detalle de recarga</a></div>
 							<div class="clear"></div>
 						</div>
 						<div class="block block4">
 							<h4>Ùltimas Recargas</h4>
-							<code>
+					
 							<?php if( !$detalleRecargas ){ ?>
 								<h5>No existen detalle de recargas disponible.</h5>
 							<?php }else{ ?>
@@ -81,7 +82,7 @@ $detalleRecargas= getDetalleRecarga( $nrotarj );
 									</tbody>
 								</table>
 							<?php } ?>
-                            </code>
+                            
                             
 							<div class="clear"></div>
 						</div>

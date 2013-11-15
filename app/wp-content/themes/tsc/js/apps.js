@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    var minimoCarga = 10;
+
     $(".submitForm").click(function(e){
         e.preventDefault();
         if(validaFormulario()){
@@ -8,7 +10,7 @@ $(document).ready(function(){
     $("#send_single").click(function(e){
         e.preventDefault();
         var singleValue = $("#single_value").val();
-        if( validaNumber(singleValue) && parseInt(singleValue) >= 6000 && parseInt(singleValue) <= 999999 ){
+        if( validaNumber(singleValue) && parseInt(singleValue) >= minimoCarga && parseInt(singleValue) <= 999999 ){
             $("#datosSingle").submit();
         }else{
             return activaErrorClass(false, "Debe ingresar monto, solo números.", $("#single_value"), "errorSingle");
@@ -26,7 +28,7 @@ $(document).ready(function(){
         var returnMulti = true;
         $('.multi_value').each(function(index) {
             var multiValueTmp = $(this).val();
-            if( validaNumber(multiValueTmp) && parseInt(multiValueTmp) >= 6000 && parseInt(multiValueTmp) <= 999999 ){
+            if( validaNumber(multiValueTmp) && parseInt(multiValueTmp) >= minimoCarga && parseInt(multiValueTmp) <= 999999 ){
                 returnMulti = true;
             }else{
                 returnMulti = activaErrorClass(false, "Debe ingresar monto, solo números.", $(this), "errorMulti");
@@ -45,7 +47,7 @@ $(document).ready(function(){
         e.preventDefault();
         var multiMontoFijo = $("#multiMontoFijo").val();
         var totalMulti = 0;
-        if( validaNumber(multiMontoFijo) && parseInt(multiMontoFijo) >= 6000 && parseInt(multiMontoFijo) <= 999999 ){
+        if( validaNumber(multiMontoFijo) && parseInt(multiMontoFijo) >= minimoCarga && parseInt(multiMontoFijo) <= 999999 ){
             $('.multi_value').each(function(index) {
                 totalMulti += parseInt(multiMontoFijo);
                 $(this).val(multiMontoFijo);
@@ -67,5 +69,9 @@ $(document).ready(function(){
     });
     $('.multi_value').focus(function(){
         tmpValFocus = parseInt($(this).val());
+    });
+    $('#imprimir_webpay').click(function(e){
+	    e.preventDefault();
+		$('#comprobante').printArea();
     });
 });

@@ -4,26 +4,38 @@
  *
  * Description: Template recarga
  */
-$dataUser = getCurrentTSC();
+if( !empty($_GET["tid"]) ){
+	$nrotarj = sanitize_text_field( wp_kses($_GET["tid"], "") );
+	#Si no es numerico despues de limpiar la variable
+	if(!is_numeric( $nrotarj )){
+		wp_redirect( get_bloginfo("url") );
+		exit();
+	}
+}else{
+	$nrotarj = null;
+}
+$dataUser = getCurrentTSC( $nrotarj );
 $asociadas = getTarjetasAsociadas();
 ?>
 <?php get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="content">
-				<div class="inner">					
+				<div class="inner">		
+				
+				<div class="clear"></div>			
 					<h2>Recarga</h2>
 					<div class="nav3">
 						<ul>
-							<li class="current"><span>1</span> Seleccionar</li>
-							<li><span>2</span> Medio de Pago</li>
-							<li><span>3</span> Comprobante</li>
+							<li class="current"><span>1</span><span class="txt"> Seleccionar</span></li>
+							<li><span>2</span> <span class="txt">Medio de Pago</span></li>
+							<li><span>3</span> <span class="txt">Comprobante</span></li>
 						</ul>
 					</div>
 					<div class="block">
-						<h3><span>1</span>Recargar Tarjetas Prepago</h3>
+						<h3>Recargar Tarjetas Prepago</h3>
 						<p>Recarga todas tus Tarjetas de Prepago por un monto fijo o si prefieres por diferentes valores, sólo debes elegir tu Tarjetas de Prepago a recargar, agregar el monto y confirmar la operación.</p>
 						<div class="accord3">
-							<h4 class="active">Cargar Tarjeta <?php print $dataUser->tarjeta; ?><span></span></h4>
+							<h4 class="active">Cargar Tarjeta Nº <?php print $dataUser->tarjeta; ?><span></span></h4>
 							<div class="block2">
 								<table border="0">
 									<thead>
@@ -40,10 +52,10 @@ $asociadas = getTarjetasAsociadas();
 											<td><?php print $dataUser->tarjeta; ?></td>
 											<td>$<?php print number_format($dataUser->saldo, 0 ,",", ".") ?></td>
 											<td>
-												<form id="datosSingle" name="datosSingle" method="post" action="<?php print get_page_link(20); ?>">
+												<form id="datosSingle" name="datosSingle" method="post" action="<?php print get_page_link(19); ?>">
 													<input type="hidden" name="single_tsc" id="single_tsc" value="<?php print $dataUser->tarjeta; ?>">
 													<input type="hidden" name="single_tsc_saldo" id="single_tsc_saldo" value="<?php print $dataUser->saldo; ?>">
-													<input type="text" name="single_value" id="single_value" value="" autocomplete="off"/>
+													<input type="text" name="single_value" id="single_value" value="" placeholder="Ingresar monto" autocomplete="off"/>
 												</form>
 											</td>
 										</tr>
@@ -57,9 +69,9 @@ $asociadas = getTarjetasAsociadas();
 										</tr>
 									</tfoot>
 								</table>
-								<p class="alignright">
+								
 									<em id="enviar">Monto mínimo $6.000 y máximo $999.999 para cada TSC</em>
-								</p>
+								
 								<p class="button-holder">
 									<div class="errorSingle"><p></p></div>
 									<a class="buttons button4" id="send_single" href="">Continuar</a>
@@ -71,10 +83,10 @@ $asociadas = getTarjetasAsociadas();
 								<p class="info">
 									<label>Recargar monto fijo a todas las Tarjetas</label>
 									<input id="multiMontoFijo" name="multiMontoFijo" type="text" value=""/>
-									<div class="errorMontoFijo"><p></p></div>
+									<div class="errorMontoFijo"></div>
 									<a class="buttons button4" id="multiDarIgual" href="">Aceptar</a>
 								</p>
-								<form id="datosMulti" name="datosMulti" method="post" action="<?php print get_page_link(20); ?>">
+								<form id="datosMulti" name="datosMulti" method="post" action="<?php print get_page_link(19); ?>">
 									<input type="hidden" name="multiTotalVaue" id="multiTotalVaue" value="">
 										<div id="resultado">
 											<table border="0">
@@ -111,9 +123,8 @@ $asociadas = getTarjetasAsociadas();
 											</table>
 										</div>
 								</form>
-								<p class="alignright">
+								
 									<em>Monto mínimo $6.000 y máximo $999.999 para cada TSC</em>
-								</p>
 								<p class="button-holder">
 									<div class="errorMulti"><p></p></div>
 									<a class="buttons button4" id="send_multi" href="">Continuar</a>

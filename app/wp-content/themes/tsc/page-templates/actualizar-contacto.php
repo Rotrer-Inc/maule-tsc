@@ -18,6 +18,8 @@ if ($_POST){
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="content">
 				<div class="inner">	
+                
+				<div class="clear"></div>
 					<h2>Configuración de Datos</h2>
 					<form name="frm_mitsc_actualiza" class="block2" id="data" action="" method="post">		
 						<input type="hidden" name="rut" id="rut" value="<?php print $dataUser->rutRecep; ?>">
@@ -73,9 +75,8 @@ if ($_POST){
 								<?php print $selectComuna; ?>
 							</select>
 						</p>
-						<p class="button-holder">
 							<a class="buttons button4 submitForm" href="">Guardar</a>
-						</p>
+					
 						<div class="error"><p></p></div>
 						<?php if($sendMail){ ?>
 						<h2>Sus datos han sido enviados para actualizar.</h2>

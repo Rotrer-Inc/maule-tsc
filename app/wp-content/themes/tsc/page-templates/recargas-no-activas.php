@@ -13,10 +13,12 @@ $noactivas = getRecargaNoActivas();
 						<li class="current"><a href="<?php print get_page_link(11); ?>">Recargas no Activadas</a></li>
 						<li><a href="<?php print get_page_link(9); ?>">Seguimientos de Recargas</a></li>
 					</ul>
+					
+				<div class="clear"></div>
 					<h2>Detalle Recargas no Activadas</h2>
 					<div class="block block4">
 						<p class="button-holder v2">
-							<a class="button3" href="<?php print APP_JQ."?action=exportaNoActivas"; ?>">Descargar Resumen</a>
+							<a class="button3" href="<?php print APP_JQ."?action=exportaNoActivas"; ?>">Descargar detalle</a>
 						</p>
 						<div class="accord">
 							<?php foreach ( $noactivas as $key => $nactiva ) { ?>

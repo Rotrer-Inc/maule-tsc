@@ -1,16 +1,39 @@
 <?php
 session_start();
 /*
+ * Revisa Session de Usuario
+ */
+if($_SESSION["mitsc"] != 1 && !is_home()){
+	#unset($_SESSION);
+	#session_destroy();
+	#wp_redirect( get_bloginfo("url") );
+	#exit();
+}
+/*
  * Constantes Sitio
  */
 define(APP_JQ, get_bloginfo("wpurl")."/wp-admin/admin-ajax.php");
+define(DS, "\\");
+define(KKC_ROOT, str_replace("/wp-content/plugins", DS."KCC", WP_PLUGIN_DIR));
+$nuevoInsumos = str_replace("/wp-content/plugins", DS."insumos", WP_PLUGIN_DIR);
+define(INSUMOS_ROOT, str_replace("\\tsc\\app", "", $nuevoInsumos));
+define(ACEPTA_DOT_COM, INSUMOS_ROOT.DS."aceptaDot.com");
+define(ACEPTA_DOT_COM_CUSTODIUM, "F:\\www\\insumos\\aceptaDot_produccion\\");
+define(WE, INSUMOS_ROOT.DS."WE");
+define(WS, INSUMOS_ROOT.DS."WS");
+define(WS_RES, INSUMOS_ROOT.DS."WSResp");
+define(WS_TEMP, INSUMOS_ROOT.DS."WSTemp");
+define(aceptaDotCom_bcoChileAut, '');
+define(aceptaDotCom_bcoChileAce, '');
 /*
  * Includes funciones por seccion
  */
+#include 'phpMailer_v2.3/class.phpmailer.php';
 include 'functions/function-login.php';
 include 'functions/function-misaldo.php';
 include 'functions/function-actualizadatos.php';
 include 'functions/function-recargas.php';
+include 'functions/function-webpay.php';
 /*
  * Formater string RUT
  */

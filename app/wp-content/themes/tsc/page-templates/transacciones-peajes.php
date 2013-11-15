@@ -32,7 +32,7 @@ $transacciones = getTransaccionesPeaje( $nrotarj );
 								<p>Ultimas cinco transacciones efectuadas en plaza.</p>
 							<?php if(!$transacciones){ ?>
 							<?php }else{ ?>
-								<table border="0">
+								<table border="0" class="table2">
 									<thead>
 										<tr>
 											<th>Fecha</th>
@@ -57,7 +57,7 @@ $transacciones = getTransaccionesPeaje( $nrotarj );
 								<a class="buttons button7" href="<?php print get_page_link(15)."?tid=".$dataUser->tarjeta; ?>">Ver todas</a>
 							<?php } ?>
 							</div>
-							
+							<div class="clear"></div>
 							<h4>Otras Tarjetas asociadas<span></span></h4>
 							<div class="">
 							<?php if( !$asociadas ){ ?>

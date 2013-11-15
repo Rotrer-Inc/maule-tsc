@@ -6,6 +6,7 @@ function processRecargaMulti( $post ){
 	global $wpdb;
 	@extract($post);
 	$arrError = array();
+	$minimoCarga = 6000;
 	//Validar array post
 	if(
 		isset($multiTotalVaue) && !empty($multiTotalVaue) &&
@@ -15,7 +16,7 @@ function processRecargaMulti( $post ){
 		$sumaValores = 0;
 		//Validar tipo de dato númerico y montos minimos / maximos
 		foreach ( $multi_value as $key => $valueTsc ) {
-			if( $valueTsc < 6000 || $valueTsc > 999999 || !is_numeric( $valueTsc ) ){
+			if( $valueTsc < $minimoCarga || $valueTsc > 999999 || !is_numeric( $valueTsc ) ){
 				$arrError = (Object) array("status" => false, "msg" => "Datos inválidos, vuelva a ingresar montos.(2)");
 				return $arrError;
 			}
@@ -47,15 +48,16 @@ function processRecargaMulti( $post ){
 }
 function processRecargaSingle( $post ){
 	global $wpdb;
-	@extract($post); pr($post);
+	@extract($post);
 	$arrError = array();
+	$minimoCarga = 10;
 	//Validar array post
 	if(
 		isset($single_tsc) && !empty($single_tsc) &&
 		isset($single_value) && !empty($single_value)
 	){
 		//Validar tipo de dato númerico y montos minimos / maximos
-		if( $single_value < 6000 || $single_value > 999999 || !is_numeric( $single_value ) ){
+		if( $single_value < $minimoCarga || $single_value > 999999 || !is_numeric( $single_value ) ){
 			$arrError = (Object) array("status" => false, "msg" => "Datos inválidos, vuelva a ingresar montos.(2)");
 			return $arrError;
 		}

@@ -24,6 +24,8 @@ $asociadas = getTarjetasAsociadas();
 							<li><a href="<?php print get_page_link(11); ?>">Recargas no Activadas</a></li>
 							<li><a href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Seguimientos de Recargas</a></li>
 						</ul>
+						
+				<div class="clear"></div>
 						<h2>Resumen de Saldo</h2>
 						<div class="block2">
 							<dl>
@@ -36,22 +38,24 @@ $asociadas = getTarjetasAsociadas();
 									<?php if( $dataUser->saldo > 0 ){ ?>
 									$<?php print number_format($dataUser->saldo, 0 ,",", ".") ?>
 									<?php }else{?>
-									Sin Saldo <br><span>* Saldo se activa al realizar la primera transacción</span>
+									Sin Saldo <br>
 									<?php } ?>
 								</dd>
 							</dl>
-							<p>
-								<em>*Saldo se activa al realizar la primera transacción</em>
-							</p>
-							<p class="button-holder">
-								<a class="buttons button1" href="#">Recarga de Tarjeta</a>
-								<a class="buttons button2" href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Detalle de Recarga</a>
-							</p>
+							
+							<div class="clear"></div>	<em>*Saldo se activa al realizar la primera transacción</em>
+							<div class="button-holder">
+                          
+								<a class="buttons button1" href="<?php echo get_page_link(5); ?>">Recargar Tarjeta</a>
+								<a class="buttons button2" href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Detalle de recarga</a>
+							</div>
 							<div class="clear"></div>
 						</div>
+						
+							<div class="clear"></div>
 						<div class="block block4">
 							<h4>Otras Tarjetas asociadas</h4>
-							<code>
+						
 							<?php if( !$asociadas ){ ?>
 								<h5>No existen tarjetas asociadas</h5>
 							<?php }else{ ?>
@@ -74,13 +78,13 @@ $asociadas = getTarjetasAsociadas();
 											<td><?php print $asociada->fecha; ?> <?php print $asociada->hora; ?></td>
 											<td>$<?php print number_format($asociada->saldo, 0 ,",", "."); ?></td>
 											<td><a href="<?php print get_page_link(9)."?tid=".$asociada->tarjeta; ?>">Detalle de Recarga</a></td>
-											<td><a href="" class="link2" >Recargas Tarjeta</a></td>
+											<td><a href="" class="link2" >Recargar Tarjeta</a></td>
 										</tr>
 										<?php $i++; } ?>
 									</tbody>
 								</table>
 							<?php } ?>
-                            </code>
+                          
                             
 							<div class="clear"></div>
 						</div>

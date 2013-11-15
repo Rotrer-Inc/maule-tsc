@@ -16,25 +16,29 @@ $(document).ready(function(){
         
         //Login form tsc
         $("#login_form").submit(function(){
-            var data = $(this).serialize();
-            $.ajax({
-                url: APP_JQ,
-                type:'POST',
-                data:'action=login_tsc&'+data,
-                dataType: 'json',
-                beforeSend: function () {
-                    //$("#msgbox").empty().text("Verificando...").fadeIn().delay(1500).fadeOut();
-                },
-                success:function(results){
-                    if( results.data.result == 1 ){
-                        $("#msgbox").empty().text(results.data.msg).fadeIn("fast", function(){
-                            location.href = $("#login_form").attr("action");
-                        });
-                    }else{
-                        $("#msgbox").empty().text(results.data.msg).fadeIn().delay(1500).fadeOut();
+            if( /*validaRut($("#rut").val()) &&*/ validaNumber($("#nrotarj").val()) ){
+                var data = $(this).serialize();
+                $.ajax({
+                    url: APP_JQ,
+                    type:'POST',
+                    data:'action=login_tsc&'+data,
+                    dataType: 'json',
+                    beforeSend: function () {
+                        //$("#msgbox").empty().text("Verificando...").fadeIn().delay(1500).fadeOut();
+                    },
+                    success:function(results){
+                        if( results.data.result == 1 ){
+                            $("#msgbox").empty().text(results.data.msg).fadeIn("fast", function(){
+                                location.href = $("#login_form").attr("action");
+                            });
+                        }else{
+                            $("#msgbox").empty().text(results.data.msg).fadeIn().delay(1500).fadeOut();
+                        }
                     }
-                }
-            });
+                });
+            }else{
+                $("#msgbox").empty().text('Favor revise RUT y/o Número Tarjeta').fadeIn().delay(1500).fadeOut();
+            }
             return false;
         });
         //Logout tsc

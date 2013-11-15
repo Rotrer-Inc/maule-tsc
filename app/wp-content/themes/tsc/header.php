@@ -33,6 +33,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/functions.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/rut.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/validate.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.PrintArea.js_4.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/apps.js"></script>
 	<script type="text/javascript">
 		var APP_JQ = '<?php print APP_JQ; ?>';
@@ -44,9 +45,11 @@
 	<div class="deco"></div>
 	<div id="wrap">		
 		<header>
+			
 			<h1 class="logo">
 				<a href="<?php bloginfo("url"); ?>">Ruta del Maule - TSC</a>
 			</h1>
+			
 			<?php if( $_SESSION['mitsc'] == true && !empty($_SESSION['mitsc_rut']) ){ ?>
 			<div class="user-log">
 				<p>Bienvenido: Nombre de usuario</p>

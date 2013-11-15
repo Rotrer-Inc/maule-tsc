@@ -1,35 +1,56 @@
+
 table {
-	border-bottom: 1px solid #ccc;
-	border-collapse: collapse;
-	border-right: 1px solid #ccc;
-	border-spacing: 0;
-	float: left;
-	margin-bottom: 20px;
-	width: 100%;
-	font-size: 1.367em;
-	color: #666;
-	text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    border-collapse: collapse;
+    border-right: 1px solid #CCCCCC;
+    border-spacing: 0;
+    color: #666666;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 630px;
 }
 table td {
-	border-left: 1px solid #ccc;
-	border-top: 1px solid #ccc;
-	padding: 8px;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    font-size: 0.9em;
+    padding: 8px;
 }
 table td a {
-	color: #666;
+    color: #0085B2;
 }
 table thead th {
-	background: #E5EBF0;
-	border-left: 1px solid #ccc;
-	border-top: 1px solid #ccc;
-	padding: 8px;
-	font-weight: 200;
+    background: none repeat scroll 0 0 #F2F2F2;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    font-size: 1.1em;
+    padding: 8px;
 }
 table tfoot td {
-	border-bottom: #fff solid 1px;
-	border-left: none;
+    border-bottom: 1px solid #FFFFFF;
+    border-left: medium none;
 }
 table tfoot td.price {
-	border-bottom: 1px solid #ccc;
-	border-left: 1px solid #ccc;
+    background: none repeat scroll 0 0 #FFEBB6;
+    border-bottom: 1px solid #E0C479;
+    border-left: 1px solid #E0C479;
+    border-radius: 3px 3px 3px 3px;
+    border-right: 1px solid #E0C479;
+}
+#multiMontoFijo {
+    border: 1px solid #999999;
+    border-radius: 3px 3px 3px 3px;
+    float: none;
+    font-size: 14px;
+    margin: 0;
+    padding: 8px;
+}
+#multiDarIgual {
+    float: right;
+    margin-left: 0;
+    margin-right: 39px;
+    margin-top: 35px;
 }

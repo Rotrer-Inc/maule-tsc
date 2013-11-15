@@ -5,12 +5,11 @@
  * Description: Template recarga
  */
 if($_POST){
-	if( count($_POST) == 4){
+	if(count($_POST) == 4){
 		$responseRecarga = processRecargaMulti($_POST);
 	}else{
 		$responseRecarga = processRecargaSingle($_POST);
 	}
-	#pr($_SESSION["recarga"]);
 }else{
 	wp_redirect( get_bloginfo("url") );
 	exit();
@@ -19,18 +18,20 @@ if($_POST){
 <?php get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<div class="content">
-				<div class="inner">					
+				<div class="inner">	
+				
+				<div class="clear"></div>				
 					<h2>Recarga</h2>
 					<div class="nav3">
 						<ul>
-							<li><span>1</span> Seleccionar</li>
-							<li class="current"><span>2</span> Medio de Pago</li>
-							<li><span>3</span> Comprobante</li>
+							<li><span>1</span><span class="txt"> Seleccionar</span></li>
+							<li class="current"><span>2 </span><span class="txt">Medio de Pago</span></li>
+							<li><span>3</span><span class="txt"> Comprobante</span></li>
 						</ul>
 					</div>
 					<div class="block">
 					  <div class="accord2">
-						<h3><span>2</span>Medios de pago</h3>
+						<h3>Medios de pago</h3>
 						  <h4 class="active">Monto a pagar <span></span></h4>
 							<div class="">
 							<div class="block2">
@@ -76,12 +77,13 @@ if($_POST){
 					<div class="pagos">
 						<h4>Pagar con:</h4>
 						<img class="webpay alignright" src="<?php echo get_template_directory_uri(); ?>/images/webpay.gif" alt="webpay" />
-						<p class="button-holder">
+						<div class="button-holder">
 							<?php if($responseRecarga->status){ ?>
-							<a class="buttons button4" href="webpay.php">Confirmar</a>
+							<a class="buttons button4" href="<?php print get_page_link(21); ?>">Confirmar</a>
+							<!--<a class="buttons button4" href="<?php print get_bloginfo("url"); ?>/KCC/pago.php">Confirmar</a>-->
 							<?php } ?>
 							<a class="buttons button2" href="<?php print get_page_link(5); ?>">Volver</a>
-						</p>
+						</div>
 					</div>
 
 				</div>
