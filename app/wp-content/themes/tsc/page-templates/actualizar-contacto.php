@@ -19,7 +19,10 @@ if ($_POST){
 			<div class="content">
 				<div class="inner">	
                 
+<<<<<<< HEAD
 				<div class="clear"></div>
+=======
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 					<h2>Configuración de Datos</h2>
 					<form name="frm_mitsc_actualiza" class="block2" id="data" action="" method="post">		
 						<input type="hidden" name="rut" id="rut" value="<?php print $dataUser->rutRecep; ?>">

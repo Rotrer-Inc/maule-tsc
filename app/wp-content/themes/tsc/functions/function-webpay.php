@@ -1,5 +1,8 @@
 <?php
+<<<<<<< HEAD
 define(EMAIL_MAULE, 'cristian@rotrer.com');
+=======
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 /*
  * Funcion setear enviar webpay y pregristro
  */
@@ -45,7 +48,10 @@ function setWebpaySubmit($sessionTsc){
 	
 	//GUARDAMOS LA INFORMACIÓN DE LA TRANSACCIÓN EN UN ARCHIVO...'
 	#$myPath = "F:\\WebSite\\www\\KCC5-WIN\\cgi-bin\\trx\\$TBK_ID_SESION.log";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 	$myPath = KKC_ROOT.DS."cgi-bin".DS."transaccioneslog".DS.$TBK_ID_SESION.".log";
 	$fic = fopen($myPath, "w+");	
 	$linea = "$TBK_MONTO;$TBK_ORDEN_COMPRA";
@@ -353,18 +359,28 @@ function saveExito($post){
 			#copy($fullPathArchivoAceptaDotCom, $fullPathArchivoAceptaDotComCC);
 			
 			#copia en Directorio C:\\custodium.com\\autopistadelmaipo\\var\\ca4xml\\input\\
+<<<<<<< HEAD
 			$fullPathArchivoAceptaDotComCCC = ACEPTA_DOT_COM_CUSTODIUM.$nombreXmlAcepta;
 			copy($fullPathArchivoAceptaDotCom, $fullPathArchivoAceptaDotComCCC);
+=======
+			#$fullPathArchivoAceptaDotComCCC = $conf['aceptaDotCom_bcoChileAce'].$nombreXmlAcepta;
+			#copy($fullPathArchivoAceptaDotCom, $fullPathArchivoAceptaDotComCCC);
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 		}
 		
 		#verifica la cantidad de folios restantes si quedan menos que la alerta de folios enviara mail		
 		if( ($datosFolio->final - $datosFolio->actual) <= $datosFolio->alerta){
+<<<<<<< HEAD
 				
+=======
+				/*
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 				$bodyAlerta = 'Favor revisar disponibilidad de folios en sitio web de Autopista del Maipo,<br>
 							 Datos de Folios:<br>
 							 Folio Inicial:'.$datosFolio->inicial.'<br>
 							 Folio Final:'.$datosFolio->final.'<br>
 							 <strong>Folio Actual:'.$folioMasUno.'</strong>';
+<<<<<<< HEAD
 				/*
 				$mailFolios = new phpmailer();
 				$mailFolios->Mailer = 'smtp';
@@ -377,6 +393,20 @@ function saveExito($post){
 				$mailDestino = 'rotrer@gmail.com';
 				$mailFolios->AddAddress($mailDestino);
 				#$mailDestino2 = 'jorellana@cintra.cl';
+=======
+				$mailFolios = new phpmailer();
+				$mailFolios->Mailer = 'smtp';
+				$mailFolios->SMTPAuth = true;
+				$mailFolios->Username = 'ventas@autopistadelmaipo.cl';
+				$mailFolios->Password = 'vt4582jk';
+				$mailFolios->FromName = 'WebSite Autopista del Maipo ';
+				$mailFolios->From = 'ventas@autopistadelmaipo.cl';
+				$mailDestino = 'jgerding@cintra.cl';
+				$mailFolios->AddAddress($mailDestino);
+				#$mailDestino = 'cristian.alvarado@neuralis.cl';
+				#$mailFolios->AddAddress($mailDestino);
+				$mailDestino2 = 'jorellana@cintra.cl';
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 				#$mailFolios->AddAddress($mailDestino2);
 				$mailFolios->Subject    = "Aviso de baja en folios";
 				$mailFolios->IsHTML = true;
@@ -384,11 +414,23 @@ function saveExito($post){
 				$mailFolios->Body = $bodyAlerta;
 				$mailFolios->Send();
 				*/
+<<<<<<< HEAD
 				
 				$headers = "MIME-Version: 1.0";
 				add_filter( 'wp_mail_content_type', 'set_html_content_type' );
 
 				wp_mail( EMAIL_MAULE, 'Aviso de baja en folios', $bodyAlerta, $headers );
+=======
+			$asunto = "Actualizar a $fromname - Tarjeta de Prepago $numerocuenta: ";
+			$bodyAlerta = 'Favor revisar disponibilidad de folios en sitio web de Autopista del Maipo,<br>
+							 Datos de Folios:<br>
+							 Folio Inicial:'.$datosFolio->inicial.'<br>
+							 Folio Final:'.$datosFolio->final.'<br>
+							 <strong>Folio Actual:'.$folioMasUno.'</strong>';
+			#$destinatario = "jgerding@cintra.cl";
+			$destinatario = "leonrov@gmail.com";
+			wp_mail( $destinatario, "WebSite Autopista del Maipo<ventas@autopistadelmaipo.cl>", $bodyAlerta );
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 		}//FIN if( ($datosFolio[0]['final'] - $datosFolio[0]['actual']) <= $datosFolio[0]['alerta']){
 		
 		######################### FIN FACTURACION  ###########################################
@@ -418,6 +460,7 @@ function saveExito($post){
 				}
 				
 			}else{
+<<<<<<< HEAD
 				
 				/*
 				$mail = new phpmailer();
@@ -431,10 +474,30 @@ function saveExito($post){
 				$mail->Subject = "Error al Generar Archivo";
 				$mail->IsHTML = true;
 				$mail->ContentType = "text/html";
+=======
+				/*
+				$mail = new phpmailer();
+				$mail->Mailer = 'smtp';
+				$mail->SMTPAuth = true;
+				$mail->Username = 'ventas@autopistadelmaipo.cl';
+				$mail->Password = 'vt4582jk';
+				$mail->FromName = 'Autopista del Maipo';
+				$mail->From = 'ventas@autopistadelmaipo.cl';
+				$mail->AddAddress('benito.gutierrez@neuralis.cl');			
+				$mail->Subject = "Error al Generar Archivo";
+				$mail->IsHTML = true;
+				$mail->ContentType = "text/html";
+				$bodynew = "Nombrearchivo : ".$date."<br>";
+				$bodynew .="Monto : ".$monto_recarga."<br>";
+				$bodynew .="Numero TSC : ".$ntsc."<br>";
+				$mail->Body = $bodynew;
+				$mail->Send();
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 				*/
 				$bodynew = "Nombrearchivo : ".$date."<br>";
 				$bodynew .="Monto : ".$monto_recarga."<br>";
 				$bodynew .="Numero TSC : ".$ntsc."<br>";
+<<<<<<< HEAD
 				#$mail->Body = $bodynew;
 				#$mail->Send();
 
@@ -447,11 +510,20 @@ function saveExito($post){
 		}//FIN if($creaArchivoPago =  fopen($fullPathArchivoPagoWsTemp, "w")){	
 		
 		include(TEMPLATEPATH.'/functions/inc_mail_comprobante.php');
+=======
+				$destinatario = "leonrov@gmail.com";
+				wp_mail( $destinatario, "Error al Generar Archivo<ventas@autopistadelmaipo.cl>", $bodynew );
+			}
+		}//FIN if($creaArchivoPago =  fopen($fullPathArchivoPagoWsTemp, "w")){	
+		
+		#include('inc_mail_comprobante.php');
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 		#verifica que algun mail de cliente antes de enviar correo
 		if(isset($datosTac->emailRecep) && !empty($datosTac->emailRecep)){
 			/*
 			$mail = new phpmailer();
 			$mail->Mailer = 'smtp';
+<<<<<<< HEAD
 			$mail->Host = 'mail.intervialchile.cl';
 			$mail->SMTPAuth = true;
 			$mail->Username = 'tsc.maule';
@@ -471,6 +543,24 @@ function saveExito($post){
 			add_filter( 'wp_mail_content_type', 'set_html_content_type' );
 
 			wp_mail( $emailRecep, 'Comprobante de recarga TSC WebPay', $body, $headers );
+=======
+			$mail->SMTPAuth = true;
+			$mail->Username = 'ventas@autopistadelmaipo.cl';
+			$mail->Password = 'vt4582jk';
+			$mail->FromName = 'Autopista del Maipo';
+			$mail->From = 'ventas@autopistadelmaipo.cl';
+		//	$mail->AddAddress("denisse@neuralis.cl");
+		//	$mail->AddAddress('jorellana@cintra.cl');
+			$mail->AddAddress($emailRecep);			
+			$mail->Subject = "Comprobante de recarga TSC WebPay ";
+			$mail->IsHTML = true;
+			$mail->ContentType = "text/html";
+			$mail->AddEmbeddedImage("../images/imgtpl/logo-am-mail.jpg", "mi-logo", "logo-am-mail.jpg","base64", "image/jpeg");
+			$mail->AddAttachment('../images/imgtpl/logo-am-mail.jpg');// attachment
+			$mail->Body = $body;
+			$mail->Send();
+			*/
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 		}
 			/*
 			//copia de mail para Jefe Comercial
@@ -492,11 +582,14 @@ function saveExito($post){
 			$mail4Comercial->Body = $body ;
 			$mail4Comercial->Send();
 			*/
+<<<<<<< HEAD
 
 			$headers = "MIME-Version: 1.0";
 			add_filter( 'wp_mail_content_type', 'set_html_content_type' );
 
 			wp_mail( EMAIL_MAULE, 'Comprobante de recarga TSC WebPay (Copia interna, area comercial - Nueva Facturación)', $body, $headers );
+=======
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 		
 		#$updateExitoReg = registrosWebPay($TBK_ID_SESION , 'exito');
 
@@ -756,6 +849,7 @@ function getTarjetaRecarga($IDSESSION){
 
 	return $html;
 }
+<<<<<<< HEAD
 
 add_filter('wp_mail_from','yoursite_wp_mail_from');
 function yoursite_wp_mail_from($content_type) {
@@ -768,4 +862,6 @@ function yoursite_wp_mail_from_name($name) {
 function set_html_content_type() {
 	return 'text/html';
 }
+=======
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 ?>

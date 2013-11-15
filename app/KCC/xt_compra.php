@@ -15,7 +15,11 @@ $myPath	= KKC_ROOT.DS."cgi-bin".DS."transaccioneslog".DS."$TBK_ID_SESION.log";
 $filename_txt	= KKC_ROOT.DS."cgi-bin".DS."validacionmac".DS."MAC01Normal$TBK_ID_SESION.txt"; 
 
 // Ruta Checkmac 
+<<<<<<< HEAD
 $cmdline	= KKC_ROOT.DS."cgi-bin".DS."tbk_check_mac.exe $filename_txt"; 
+=======
+$cmdline	= KKC_ROOT.DS."cgi-bin".DS."tbk_check_mac.cgi $filename_txt"; 
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 
 /****************** FIN CONFIGURACION *****************/
 

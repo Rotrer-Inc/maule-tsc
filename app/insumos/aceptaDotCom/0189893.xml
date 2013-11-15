@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+									<Documento id="T33F16148">
+											<DTE>	
+											  <Encabezado>
+											      <IdDoc>
+											          <TipoDTE>34</TipoDTE>
+											          <Folio>189893</Folio>
+											          <FchEmis>2013-10-01</FchEmis>
+											      </IdDoc>
+											      <Emisor>
+											          <RUTEmisor>96875230-8</RUTEmisor>
+											          <RznSoc>Autopista del Maipo Sociedad Concesionaria S.A</RznSoc>
+											          <GiroEmis>Concesiones Viales</GiroEmis>
+											          <Acteco>452020</Acteco>
+											          <DirOrigen>Avenida Andres Bello 2711 Piso 17</DirOrigen>
+											          <CmnaOrigen>Las Condes</CmnaOrigen>
+											          <CiudadOrigen>Santiago</CiudadOrigen>
+									                  <CorreoEmisor>ventas@autopistadelmaipo.cl</CorreoEmisor>
+											      </Emisor>
+											      <Receptor>
+											          <RUTRecep>76981890-1</RUTRecep>
+											          <RznSocRecep>EXPORTADORA SAN ANDRES LTDA.</RznSocRecep>
+											          <GiroRecep>Otro</GiroRecep>
+											          <DirRecep>LONGITUDINAL SUR 202</DirRecep>
+											          <CmnaRecep>Molina</CmnaRecep>
+											          <CiudadRecep></CiudadRecep>
+											      </Receptor>
+											      <Totales>
+											          <MntExe></MntExe>		          
+											          <MntTotal></MntTotal>
+									                  <TmstFirma>2013-10-01T15:21:44</TmstFirma>
+											      </Totales>
+											  </Encabezado>
+											   
+			<Detalle>
+				  <NroLinDet>1</NroLinDet>
+				  <NmbItem>Tarifas de Peajes TSC Nº 4670</NmbItem>
+				  <MontoItem>12000</MontoItem>
+			  </Detalle>		 
+											</DTE>
+											<DatosAdjuntos>
+											  <MailReceptor>JNAVARRO@SAN-ANDRES.CL</MailReceptor>
+											  <MailEmisor>ventas@autopistadelmaipo.cl</MailEmisor>
+									          <Subject>Factura Recarga TSC Autopista del Maipo</Subject>
+											  <Copias>0</Copias>
+											</DatosAdjuntos>		
+									</Documento>

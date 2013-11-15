@@ -13,12 +13,19 @@ if($_SESSION["mitsc"] != 1 && !is_home()){
  * Constantes Sitio
  */
 define(APP_JQ, get_bloginfo("wpurl")."/wp-admin/admin-ajax.php");
+<<<<<<< HEAD
 define(DS, "\\");
 define(KKC_ROOT, str_replace("/wp-content/plugins", DS."KCC", WP_PLUGIN_DIR));
 $nuevoInsumos = str_replace("/wp-content/plugins", DS."insumos", WP_PLUGIN_DIR);
 define(INSUMOS_ROOT, str_replace("\\tsc\\app", "", $nuevoInsumos));
 define(ACEPTA_DOT_COM, INSUMOS_ROOT.DS."aceptaDot.com");
 define(ACEPTA_DOT_COM_CUSTODIUM, "F:\\www\\insumos\\aceptaDot_produccion\\");
+=======
+define(KKC_ROOT, str_replace("wp-content/plugins", "KCC", WP_PLUGIN_DIR));
+define(INSUMOS_ROOT, str_replace("wp-content/plugins", "insumos", WP_PLUGIN_DIR));
+define(DS, "/");
+define(ACEPTA_DOT_COM, INSUMOS_ROOT.DS."aceptaDotCom");
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 define(WE, INSUMOS_ROOT.DS."WE");
 define(WS, INSUMOS_ROOT.DS."WS");
 define(WS_RES, INSUMOS_ROOT.DS."WSResp");

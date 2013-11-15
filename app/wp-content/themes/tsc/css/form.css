@@ -3,6 +3,7 @@ form {
     float: left;
 }
 form.block2 {
+<<<<<<< HEAD
     float: none;
     margin: 0 auto 20px;
     width: 490px;
@@ -11,6 +12,11 @@ form p {
     margin-bottom: 12px;
     width: 100%;
 	float:left;
+=======
+	width: 440px;
+	margin:0 auto;
+	float:none;
+>>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 }
 form.block2 label {
     float: left;
