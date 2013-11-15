@@ -19,15 +19,10 @@ if($_POST){
             
             <div class="content">
             <div class="inner-fracaso">
-<<<<<<< HEAD
 						
 				<div class="clear"></div>
             <h2>Fracaso</h2>
 			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" id="fracaso">
-=======
-            <h2>Fracaso</h2>
-			<table id="fracaso" width="100%" border="0" cellspacing="0" cellpadding="0">
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
               <tr>
                 <th scope="col">Orden de compra: <?php print $responseExito->TBK_ORDEN_COMPRA; ?></th>
               </tr>

@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 [30-Sep-2013 17:20:13 America/Caracas] PHP Fatal error:  Call to undefined function get_header() in /home/neuralis/public_html/dev/rutamaule/tarjeta-prepago/app/wp-content/themes/tsc/index.php on line 10
-=======
-[30-Sep-2013 17:20:13 America/Caracas] PHP Fatal error:  Call to undefined function get_header() in /home/neuralis/public_html/dev/rutamaule/tarjeta-prepago/app/wp-content/themes/tsc/index.php on line 10
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1

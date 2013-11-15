@@ -181,15 +181,9 @@ footer dd.pos3 {
     padding-left: 20px;
 }
 .block {
-<<<<<<< HEAD
     display: block;
     margin: 0 auto;
     width: 630px;
-=======
-	width: 630px;
-	/*position: relative;*/
-	margin: 0 auto 20px;
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 }
 .block2 {
     float: left;
@@ -202,7 +196,6 @@ footer dd.pos3 {
 .block2 p {
 }
 .block2 dl {
-<<<<<<< HEAD
     background: none repeat scroll 0 0 #F1F1F1;
     border: 1px solid #CCCCCC;
     border-radius: 4px 4px 4px 4px;
@@ -217,19 +210,6 @@ footer dd.pos3 {
     float: left;
     margin-left: 10px;
     text-align: right;
-=======
-	background: #eee;
-	width: 630px;
-	height:40px;
-	line-height:40px;
-	margin:0 auto 10px;
-	border-radius: 4px;
-	font-size: 1.667em;
-}
-.block2 dt {
-	float: left;
-	margin-left: 40px;
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 }
 .block2 dd {
     border-left: 1px solid #CCCCCC;
@@ -388,7 +368,6 @@ h4.active:hover{background:#fce5a9;}
     font-style: italic;
     text-align: right;
 }
-<<<<<<< HEAD
 code {
     font-size: 1em;
 }
@@ -397,24 +376,6 @@ code {
     float: left;
     font-style: italic;
     margin: 20px 0;
-=======
-
-code{font-size:1em;font-family:Calibri, Arial, Helvetica, sans-serif;}
-
-/*.block4{
-    float: left;
-}*/
-.error{
-    background-color: #359CFE;
-    border: 1px dashed #FFFFFF;
-    display: none;
-    left: 97px;
-    margin: 416px 0 0;
-    padding: 3px 0;
-    position: absolute;
-    width: 238px;
-    z-index: 500;
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 }
 .error p, .errorMulti p, .errorSingle p, .errorMontoFijo p {
     color: #FFFFFF;
@@ -457,7 +418,6 @@ code{font-size:1em;font-family:Calibri, Arial, Helvetica, sans-serif;}
 .errored {
     border: 1px solid #CC0000;
 }
-<<<<<<< HEAD
 .inner-fracaso {
     padding: 0;
 }
@@ -541,36 +501,3 @@ dl + dl {
 .container_16 {
   zoom: 1;
 }
-=======
-
-.inner-fracaso{
-	padding:30px 10px 10px;
-	}
-
-#fracaso{
-	border:1px solid #ccc;
-	}
-	
-#fracaso th{
-	background:#E5EBF0;
-	font-size:1.5em;
-	font-weight:bold;
-	height:40px;
-	}
-	
-#contenido-fracaso{
-	width:460px;
-	margin:0 auto;
-	font-size:11px;
-	padding: 15px 0;
-	text-align:left;
-	}
-	
-#contenido-fracaso p{
-	font-weight:bold;
-	}
-	
-#contenido-fracaso ul li{
-	margin:10px 0;
-	}
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1

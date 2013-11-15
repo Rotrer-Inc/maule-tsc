@@ -43,20 +43,11 @@ $asociadas = getTarjetasAsociadas();
 								</dd>
 							</dl>
 							
-<<<<<<< HEAD
 							<div class="clear"></div>	<em>*Saldo se activa al realizar la primera transacción</em>
 							<div class="button-holder">
                           
 								<a class="buttons button1" href="<?php echo get_page_link(5); ?>">Recargar Tarjeta</a>
 								<a class="buttons button2" href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Detalle de recarga</a>
-=======
-							<div class="button-holder">
-                            <p>
-								<em>*Saldo se activa al realizar la primera transacción</em>
-							</p>
-								<a class="buttons button1" href="<?php echo get_page_link(5); ?>">Recarga de Tarjeta</a>
-								<a class="buttons button2" href="<?php print get_page_link(9)."?tid=".$dataUser->tarjeta; ?>">Detalle de Recarga</a>
->>>>>>> 51091f05633421a29193c6361bf1f81a11c155c1
 							</div>
 							<div class="clear"></div>
 						</div>
