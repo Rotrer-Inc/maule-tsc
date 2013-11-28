@@ -22,7 +22,7 @@ $noactivas = getRecargaNoActivas();
 						</p>
 						<div class="accord">
 							<?php foreach ( $noactivas as $key => $nactiva ) { ?>
-							<h4 class="<?php print ($key == 0) ? 'active' : ''; ?>">Tarjeta Prepago Nº <?php print $nactiva->tarjeta; ?><span></span></h4>
+							<h4 class="<?php print (count($nactiva->recargas) > 0) ? 'active' : ''; ?>">Tarjeta Prepago Nº <?php print $nactiva->tarjeta; ?><span></span></h4>
 							<div class="block2">
 								<table border="0">
 								<?php if($nactiva->recargas){ ?>
